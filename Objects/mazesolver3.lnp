@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\mazesolver3.obj" 
+TO ".\Objects\mazesolver3" 
+
+PRINT(".\Listings\mazesolver3.map")

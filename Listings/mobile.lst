@@ -1,0 +1,71 @@
+C51 COMPILER V9.55   MOBILE                                                                07/13/2016 14:39:42 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE MOBILE
+OBJECT MODULE PLACED IN .\Objects\mobile.obj
+COMPILER INVOKED BY: D:\ROBOTICS\C51\BIN\C51.EXE mobile.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings\mobile.ls
+                    -t) TABS(2) OBJECT(.\Objects\mobile.obj)
+
+line level    source
+
+   1          #include<reg52.h>  //we need to include that header file for that particular microcontroller
+   2          #include<stdio.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define st 0x0a;
+   6          #define stop 0x00;
+   7          #define rev 0x05;
+   8          
+   9          unsigned int a; //no need for the signs
+  10          
+  11          
+  12          void main()
+  13          {
+  14   1      while(1) //infinite loop
+  15   1      {
+  16   2      a=P0&0x0F;
+  17   2      if(a==0x02)
+  18   2      {
+  19   3      P2=st;
+  20   3      }
+  21   2      if(a==0x04)
+  22   2      {
+  23   3      P2=lt;
+  24   3      }
+  25   2      if(a==0x05)
+  26   2      {
+  27   3      P2=stop;
+  28   3      }
+  29   2      if(a==0x06)
+  30   2      {
+  31   3      P2=rt;
+  32   3      
+  33   3      }
+  34   2      if(a==0x08)
+  35   2      {
+  36   3      P2=rev;
+  37   3      
+  38   3      }
+  39   2      
+  40   2      } 
+  41   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     63    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+C51 COMPILER V9.55   MOBILE                                                                07/13/2016 14:39:42 PAGE 2   
+
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

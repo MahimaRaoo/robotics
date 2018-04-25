@@ -1,0 +1,102 @@
+C51 COMPILER V9.55   FINAL1                                                                07/15/2016 15:31:35 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE FINAL1
+OBJECT MODULE PLACED IN .\Objects\final1.obj
+COMPILER INVOKED BY: D:\ROBOTICS\C51\BIN\C51.EXE final1.c OMF2 OPTIMIZE(8,SPEED) BROWSE DEBUG PRINT(.\Listings\final1.ls
+                    -t) TABS(2) OBJECT(.\Objects\final1.obj)
+
+line level    source
+
+   1          #include <stdio.h>
+   2          #include <reg52.h>
+   3          #define lt 0x06;
+   4          #define rt 0x09;
+   5          #define st 0x0a;
+   6          //#define rev 0x05;
+   7          //#define stop 0x00;
+   8          /*void delay(unsigned int t)
+   9          {
+  10          int i,j;
+  11          for(i=0;i<t;i++)
+  12          {
+  13          for(j=0;j<1275;j++)
+  14            {}
+  15          }}
+  16          */
+  17          void main()
+  18          {
+  19   1      unsigned int a;
+  20   1        
+  21   1      while(1)
+  22   1      {
+  23   2      a=P1&0x07;
+  24   2      if((a==0x04)||(a==0x05))
+  25   2      {
+  26   3      P2=st;
+  27   3      }
+  28   2      
+  29   2      if((a==0x01)||(a==0x02)||(a==0x03))
+  30   2      {
+  31   3      
+  32   3      while(a!=0x05)
+  33   3      {
+  34   4      P2=lt;
+  35   4        
+  36   4        a=P1&0x07;
+  37   4      }
+  38   3      
+  39   3      
+  40   3      }
+  41   2      
+  42   2      
+  43   2      if(a==0x07)
+  44   2      { 
+  45   3      
+  46   3        while(a!=0x05)
+  47   3      {
+  48   4      P2=lt;
+  49   4        
+  50   4        a=P1&0x07;
+  51   4      }
+  52   3      
+  53   3      }
+  54   2      
+C51 COMPILER V9.55   FINAL1                                                                07/15/2016 15:31:35 PAGE 2   
+
+  55   2        
+  56   2        
+  57   2        if(a==0x06)
+  58   2      {
+  59   3      
+  60   3      
+  61   3      while(a!=0x05)
+  62   3      {
+  63   4      P2=rt;
+  64   4      
+  65   4        a=P1&0x07;
+  66   4      }
+  67   3      
+  68   3      }
+  69   2      }}
+  70          
+  71          
+  72          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    103    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
